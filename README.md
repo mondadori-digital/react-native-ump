@@ -1,15 +1,16 @@
 # react-native-ump
 
+A React Native component for Google User Messaging Platform SDK ([Funding Choices](https://support.google.com/fundingchoices/))
+
 ## Getting started
 
+**npm:**
 `$ npm install react-native-ump --save`
 
-### Mostly automatic installation
-
-`$ react-native link react-native-ump`
+**Yarn:**
+`$ yarn add react-native-ump`
 
 ### Manual installation
-
 
 #### iOS
 
@@ -21,20 +22,22 @@
 #### Android
 
 1. Open up `android/app/src/main/java/[...]/MainApplication.java`
-  - Add `import it.mondadori.RNUmpPackage;` to the imports at the top of the file
-  - Add `new RNUmpPackage()` to the list returned by the `getPackages()` method
-2. Append the following lines to `android/settings.gradle`:
-  	```
-  	include ':react-native-ump'
-  	project(':react-native-ump').projectDir = new File(rootProject.projectDir, 	'../node_modules/react-native-ump/android')
-  	```
-3. Insert the following lines inside the dependencies block in `android/app/build.gradle`:
-  	```
-      compile project(':react-native-ump')
-  	```
 
+- Add `import it.mondadori.RNUmpPackage;` to the imports at the top of the file
+- Add `new RNUmpPackage()` to the list returned by the `getPackages()` method
+
+2. Append the following lines to `android/settings.gradle`:
+   ```
+   include ':react-native-ump'
+   project(':react-native-ump').projectDir = new File(rootProject.projectDir, 	'../node_modules/react-native-ump/android')
+   ```
+3. Insert the following lines inside the dependencies block in `android/app/build.gradle`:
+   ```
+     compile project(':react-native-ump')
+   ```
 
 ## Usage
+
 ```javascript
 import RNUmp from 'react-native-ump';
 
