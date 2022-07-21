@@ -120,4 +120,19 @@ RCT_EXPORT_METHOD(reset) {
     }
 }   
 
+RCT_EXPORT_METHOD(getTCFConsent:(RCTPromiseResolveBlock)resolve
+                 rejecter:(RCTPromiseRejectBlock)reject)
+{
+    @try {
+        NSLog(@"RNUmp [getTCFConsent]");
+        NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
+        NSString *tcfConsent = [prefs stringForKey:@"IABTCF_AddtlConsent"];
+        NSLog(@"RNUmp [getTCFConsent] %@: ", tcfConsent);
+        resolve(tcfConsent);
+    } @catch (NSError *error) {
+        NSLog(@"RNUmp [getTCFConsent] error: %@", error.localizedDescription);
+        reject(@"getTCFConsent error", error.localizedDescription, nil);
+    }
+}
+
 @end

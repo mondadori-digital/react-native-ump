@@ -148,4 +148,15 @@ public class RNUmpModule extends ReactContextBaseJavaModule {
             Log.d("RNUmp", "[UMP reset] error: " + e.getMessage());
         }
     }
+
+    @ReactMethod
+    public void getTCFConsent(Promise promise) {
+        try {
+            SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(reactContext.getApplicationContext());
+            String tcfConsent = sharedPref.getString("IABTCF_AddtlConsent", "");
+            promise.resolve(tcfConsent);
+        } catch(Exception e) {
+            promise.reject("RNUmp getTCFConsent Error", e);
+        }
+    }
 }

@@ -13,7 +13,13 @@
     "baseUrl": "https://github.com/mondadori-digital/react-native-ump"
   },
   "keywords": [
-    "react-native","funding choices", "cmp", "ump", "google", "admob", "admanager"
+    "react-native",
+    "funding choices",
+    "cmp",
+    "ump",
+    "google",
+    "admob",
+    "admanager"
   ],
   "author": {
     "name": "Mondadori",
@@ -23,7 +29,7 @@
   "licenseFilename": "LICENSE",
   "readmeFilename": "README.md",
   "peerDependencies": {
-    "react": "^16.8.1",
+    "react": ">=16.8.1",
     "react-native": ">=0.59.0-rc.0 <1.0.x"
   },
   "devDependencies": {
