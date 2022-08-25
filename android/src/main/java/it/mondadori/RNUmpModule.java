@@ -2,6 +2,8 @@ package it.mondadori;
 
 import android.app.Activity;
 import android.util.Log;
+import android.preference.PreferenceManager;
+import android.content.SharedPreferences;
 
 import androidx.annotation.Nullable;
 
